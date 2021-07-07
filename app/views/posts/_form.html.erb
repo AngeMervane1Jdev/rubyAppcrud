@@ -1,0 +1,14 @@
+<div class="container py-3 text-center">
+  <div class="form">
+    <%= form_with(model: @post, local: true ,url: choose_new_or_edit ) do |form| %>
+<% if @post.errors.any? %>
+  <% end %>
+  <div class="post_content form-group ">
+    <p class="text-center"><%= form.label :'What to write ?'%></p>
+    <%= form.text_area :content %>
+  </div>
+  <p class="py-3"><%= form.submit %></p>
+<% end %>
+  </div>
+<%= link_to "Retour à l'écran de la liste des blogs", posts_path,class:"btn btn-secondary" %>
+</div>

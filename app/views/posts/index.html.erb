@@ -1,2 +1,20 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<header >
+    <%= image_tag("font.jpg", :alt => "--",class:'img-fluid w-100 h-auto p-0 m-0') %>
+  </header>
+  <h1 class="text-center">Liste des blogs</h1>
+  <div class="container row  my-auto mx-auto">
+  <% @posts.each do |post| %>
+  <div class="card m-3"   style="width: 18rem;">
+    <%= image_tag("few.jpg", :alt => "--",class:'card-img-top') %>
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text"><%= post.content %></p>
+      <div class="card-footer row">
+        <%= link_to 'Vérifier les détails', post_path(post.id) ,class:'btn btn-success'%>
+        <%= link_to "Modifier le blog", edit_post_path(post.id), data: { confirm: 'Puis-je vraiment le modifier ?' } ,class:'btn btn-primary'%>
+        <%= link_to 'Supprimer le blog', post_path(post.id), method: :delete ,data: { confirm: 'Puis-je vraiment le supprimer ?' } ,class:'btn btn-danger'%>
+      </div>
+      </div>
+  </div>
+  <% end %>
+  </div>

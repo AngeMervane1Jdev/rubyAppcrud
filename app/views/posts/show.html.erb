@@ -1,2 +1,11 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<h1>Écran des détails du Posts</h1>
+<div class="container">
+    <div class="card">
+        <div class="card-img-top">
+            <%= image_tag("few.jpg", :alt => "--",class:'card-img-top img-fluid') %>
+        </div>
+        <div class="card-body">
+            <%= @post.content %>
+        </div>
+    </div>
+</div>
