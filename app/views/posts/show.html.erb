@@ -1,11 +1,13 @@
-<h1>Écran des détails du Posts</h1>
-<div class="container">
+<h1 class="text-center">Page des détails du Posts</h1>
+<div class="container text-center">
     <div class="card">
-        <div class="card-img-top">
-            <%= image_tag("few.jpg", :alt => "--",class:'card-img-top img-fluid') %>
-        </div>
-        <div class="card-body">
-            <%= @post.content %>
-        </div>
+        <div class="row bg-dark">
+            <div class="col m-0">
+               <%= image_tag("few.jpg", :alt => "--",class:'img-fluid w-100') %>
+            </div>
+            <div class="col m-0 text-center bg-dark">
+                <div class="text-center text-light"><%= @post.content %></div>
+            </div>
     </div>
+  
 </div>

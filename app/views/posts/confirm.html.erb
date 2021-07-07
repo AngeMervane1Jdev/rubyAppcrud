@@ -1,15 +1,16 @@
 
 <div class="container py-3">
+  <h1 class="text-center">Do You Really Want To Create This Post ?</h1>
  <div class="card">
    <div class="card-title">
-     <h1>Twitte to be Create</h1>
+   
    </div>
    <div class="card-body">
     <%= form_with(model: @post, url: posts_path,local: true) do |form| %>
     <%= form.hidden_field :content %>
-    <p>Texte:<%= @post.content %></p>
-    <%= form.submit  "Oui" %>
-    <%= form.submit "Retour" ,name:'back'%>
+    <p><%= @post.content %></p>
+    <%= form.submit  "Yes" ,class:'btn btn-success'%>
+    <%= form.submit "No Go Back" ,name:'back',class:'btn btn-warning'%>
   <% end %>
    </div>
  </div>

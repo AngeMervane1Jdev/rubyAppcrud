@@ -5,7 +5,7 @@
   <% end %>
   <div class="post_content form-group ">
     <p class="text-center"><%= form.label :'What to write ?'%></p>
-    <%= form.text_area :content %>
+    <%= form.text_area :content ,autofocus:true, class:'w-50 text-center'%>
   </div>
   <p class="py-3"><%= form.submit %></p>
 <% end %>
